@@ -1,4 +1,5 @@
 pub mod problem_1071;
+pub mod problem_1431;
 pub mod problem_1768;
 #[cfg(test)]
 mod tests {
@@ -22,6 +23,19 @@ mod tests {
             )
         }
     }
+
+    mod problem_1431_tests {
+        use crate::problem_1431::Candies;
+
+        #[test]
+        fn test_kids_with_candies() {
+            assert_eq!(
+                Candies::greatest_candies(vec![2, 3, 5, 1, 3], 3),
+                vec![true, true, true, false, true]
+            )
+        }
+    }
+
     mod problem_1768_tests {
 
         use crate::problem_1768::Solution;
