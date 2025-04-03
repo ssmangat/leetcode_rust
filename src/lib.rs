@@ -1,8 +1,19 @@
+pub mod problem_1071;
 pub mod problem_1768;
-
 #[cfg(test)]
 mod tests {
 
+    mod problem_1071_tests {
+        use crate::problem_1071::Gcd;
+
+        #[test]
+        fn test_strings_gcd_1() {
+            assert_eq!(
+                Gcd::gcd_strings("ABABAB".to_string(), "ABAB".to_string()),
+                "AB".to_string()
+            );
+        }
+    }
     mod problem_1768_tests {
 
         use crate::problem_1768::Solution;
