@@ -1,9 +1,21 @@
 pub mod problem_1071;
 pub mod problem_1431;
 pub mod problem_1768;
+pub mod problem_605;
+
 #[cfg(test)]
 mod tests {
 
+    mod problem_605_tests {
+        use crate::problem_605::FlowerBed;
+        #[test]
+        fn test_flower_bed() {
+            assert_eq!(
+                FlowerBed::can_place_flowers(vec![1, 0, 0, 0, 1, 0, 0], 2),
+                true
+            );
+        }
+    }
     mod problem_1071_tests {
         use crate::problem_1071::Gcd;
 
