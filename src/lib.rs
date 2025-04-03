@@ -13,6 +13,14 @@ mod tests {
                 "AB".to_string()
             );
         }
+
+        #[test]
+        fn test_strings_gcd_2() {
+            assert_eq!(
+                Gcd::gcd_string_using_len("ABABAB".to_string(), "ABAB".to_string()),
+                "AB"
+            )
+        }
     }
     mod problem_1768_tests {
 
