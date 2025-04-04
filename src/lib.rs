@@ -1,11 +1,24 @@
 pub mod problem_1071;
 pub mod problem_1431;
+pub mod problem_151;
 pub mod problem_1768;
 pub mod problem_345;
 pub mod problem_605;
 
 #[cfg(test)]
 mod tests {
+
+    mod problem_151_test {
+        use crate::problem_151::Solution;
+
+        #[test]
+        fn test_word_reversal_for_string() {
+            assert_eq!(
+                Solution::reverse_words_of_string(String::from(" Sky is yellow ,   NOT")),
+                "NOT , yellow is Sky"
+            );
+        }
+    }
 
     mod problem_345_tests {
         use crate::problem_345::Solution;
