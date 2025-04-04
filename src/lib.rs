@@ -1,10 +1,23 @@
 pub mod problem_1071;
 pub mod problem_1431;
 pub mod problem_1768;
+pub mod problem_345;
 pub mod problem_605;
 
 #[cfg(test)]
 mod tests {
+
+    mod problem_345_tests {
+        use crate::problem_345::Solution;
+
+        #[test]
+        fn test_reverse_vowels() {
+            assert_eq!(
+                Solution::reverse_vowels(String::from("sArtileumoyzet")),
+                String::from("sertoluemiyzAt")
+            );
+        }
+    }
 
     mod problem_605_tests {
         use crate::problem_605::FlowerBed;
