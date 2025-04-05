@@ -2,6 +2,7 @@ pub mod problem_1071;
 pub mod problem_1431;
 pub mod problem_151;
 pub mod problem_1768;
+pub mod problem_238;
 pub mod problem_345;
 pub mod problem_605;
 
@@ -16,6 +17,18 @@ mod tests {
             assert_eq!(
                 Solution::reverse_words_of_string(String::from(" Sky is yellow ,   NOT")),
                 "NOT , yellow is Sky"
+            );
+        }
+    }
+
+    mod problem_238_test {
+        use crate::problem_238::Solution;
+
+        #[test]
+        fn test_product_of_list() {
+            assert_eq!(
+                Solution::product_of_list(vec![-1, 1, 0, -3, 3]),
+                vec![0, 0, 9, 0, 0]
             );
         }
     }
