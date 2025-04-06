@@ -5,6 +5,7 @@ pub mod problem_1768;
 pub mod problem_238;
 pub mod problem_283;
 pub mod problem_345;
+pub mod problem_392;
 pub mod problem_605;
 
 #[cfg(test)]
@@ -42,6 +43,26 @@ mod tests {
             let mut v = vec![0, 1, 0, 12, 3, 0, 5];
             Solution::move_zeros(&mut v);
             assert_eq!(v, vec![1, 12, 3, 5, 0, 0, 0]);
+        }
+    }
+
+    mod problem_392_tests {
+        use crate::problem_392::Solution;
+
+        #[test]
+        fn test_is_subsequence() {
+            assert_eq!(
+                Solution::is_subsequence(String::from("abc"), String::from("ahbfcr")),
+                true
+            )
+        }
+
+        #[test]
+        fn test_is_not_subsequence() {
+            assert_ne!(
+                Solution::is_subsequence(String::from("abcd"), String::from("ahbdfcr")),
+                true
+            )
         }
     }
 
