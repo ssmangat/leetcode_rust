@@ -3,6 +3,7 @@ pub mod problem_1431;
 pub mod problem_151;
 pub mod problem_1768;
 pub mod problem_238;
+pub mod problem_283;
 pub mod problem_345;
 pub mod problem_605;
 
@@ -30,6 +31,17 @@ mod tests {
                 Solution::product_of_list(vec![-1, 1, 0, -3, 3]),
                 vec![0, 0, 9, 0, 0]
             );
+        }
+    }
+
+    mod problem_283_test {
+        use crate::problem_283::Solution;
+
+        #[test]
+        fn test_move_zeros() {
+            let mut v = vec![0, 1, 0, 12, 3, 0, 5];
+            Solution::move_zeros(&mut v);
+            assert_eq!(v, vec![1, 12, 3, 5, 0, 0, 0]);
         }
     }
 
