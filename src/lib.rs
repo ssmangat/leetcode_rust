@@ -1,4 +1,5 @@
 pub mod problem_1071;
+pub mod problem_11;
 pub mod problem_1431;
 pub mod problem_151;
 pub mod problem_1768;
@@ -10,6 +11,18 @@ pub mod problem_605;
 
 #[cfg(test)]
 mod tests {
+
+    mod problem_11_tests {
+        use crate::problem_11::Solution;
+
+        #[test]
+        fn test_container_with_most_water() {
+            assert_eq!(
+                Solution::container_with_most_water(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]),
+                49
+            )
+        }
+    }
 
     mod problem_151_test {
         use crate::problem_151::Solution;
