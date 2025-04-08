@@ -3,6 +3,7 @@ pub mod problem_1071;
 pub mod problem_11;
 pub mod problem_1431;
 pub mod problem_1456;
+pub mod problem_1493;
 pub mod problem_151;
 pub mod problem_1768;
 pub mod problem_238;
@@ -214,6 +215,18 @@ mod tests {
             assert_eq!(
                 Solution::maximum_vowels_in_substring(String::from("leetcode"), 3),
                 2
+            );
+        }
+    }
+
+    mod problem_1493_tests {
+        use crate::problem_1493::Solution;
+
+        #[test]
+        fn test_longest_subarray_after_removing_element() {
+            assert_eq!(
+                Solution::longest_subarray_after_removing_element(vec![0, 1, 1, 1, 0, 1, 1, 0, 1]),
+                5
             );
         }
     }
