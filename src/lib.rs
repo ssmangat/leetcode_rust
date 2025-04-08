@@ -1,3 +1,4 @@
+pub mod problem_1004;
 pub mod problem_1071;
 pub mod problem_11;
 pub mod problem_1431;
@@ -154,6 +155,21 @@ mod tests {
                 ),
                 -594.58065
             )
+        }
+    }
+
+    mod problem_1004_tests {
+        use crate::problem_1004;
+
+        #[test]
+        fn test_max_consecutive_ones() {
+            assert_eq!(
+                problem_1004::Solution::max_consecutive_ones(
+                    vec![0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 1],
+                    3
+                ),
+                10
+            );
         }
     }
 
