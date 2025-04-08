@@ -1,6 +1,7 @@
 pub mod problem_1071;
 pub mod problem_11;
 pub mod problem_1431;
+pub mod problem_1456;
 pub mod problem_151;
 pub mod problem_1768;
 pub mod problem_238;
@@ -186,6 +187,18 @@ mod tests {
                 Candies::greatest_candies(vec![2, 3, 5, 1, 3], 3),
                 vec![true, true, true, false, true]
             )
+        }
+    }
+
+    mod problem_1456_tests {
+        use crate::problem_1456::Solution;
+
+        #[test]
+        fn test_maximum_vowels_in_substring() {
+            assert_eq!(
+                Solution::maximum_vowels_in_substring(String::from("leetcode"), 3),
+                2
+            );
         }
     }
 
