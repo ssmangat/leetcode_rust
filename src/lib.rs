@@ -13,6 +13,7 @@ pub mod problem_345;
 pub mod problem_392;
 pub mod problem_605;
 pub mod problem_643;
+pub mod problem_724;
 pub mod problem_75;
 
 #[cfg(test)]
@@ -158,6 +159,15 @@ mod tests {
                 ),
                 -594.58065
             )
+        }
+    }
+
+    mod problem_724_tests {
+        use crate::problem_724::Solution;
+
+        #[test]
+        fn test_find_pivot_index() {
+            assert_eq!(Solution::find_pivot_index(vec![1, 7, 3, 6, 5, 6]), 3);
         }
     }
 
