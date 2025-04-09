@@ -5,6 +5,7 @@ pub mod problem_1431;
 pub mod problem_1456;
 pub mod problem_1493;
 pub mod problem_151;
+pub mod problem_1732;
 pub mod problem_1768;
 pub mod problem_238;
 pub mod problem_283;
@@ -228,6 +229,16 @@ mod tests {
                 Solution::longest_subarray_after_removing_element(vec![0, 1, 1, 1, 0, 1, 1, 0, 1]),
                 5
             );
+        }
+    }
+
+    mod problem_1732_tests {
+
+        use crate::problem_1732::Solution;
+
+        #[test]
+        fn test_highest_altitude() {
+            assert_eq!(Solution::highest_altitude(vec![-4, -3, -2, -1, 4, 3, 2]), 0);
         }
     }
 
