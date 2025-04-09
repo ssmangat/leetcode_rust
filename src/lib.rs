@@ -7,6 +7,7 @@ pub mod problem_1493;
 pub mod problem_151;
 pub mod problem_1732;
 pub mod problem_1768;
+pub mod problem_2215;
 pub mod problem_238;
 pub mod problem_283;
 pub mod problem_345;
@@ -271,6 +272,18 @@ mod tests {
                 word2: String::from("defg"),
             };
             assert_eq!(words.merge_alternately(), "adbefg");
+        }
+    }
+
+    mod problem_2215_tests {
+        use crate::problem_2215::Solution;
+
+        #[test]
+        fn test_difference_of_two_arrays() {
+            assert_eq!(
+                Solution::difference_of_two_arrays(vec![1, 2, 3], vec![2, 4, 6]),
+                vec![vec![3, 1], vec![4, 6]]
+            );
         }
     }
 }
