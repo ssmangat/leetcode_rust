@@ -1,6 +1,7 @@
 pub mod problem_1004;
 pub mod problem_1071;
 pub mod problem_11;
+pub mod problem_1207;
 pub mod problem_1431;
 pub mod problem_1456;
 pub mod problem_1493;
@@ -204,6 +205,18 @@ mod tests {
                 Gcd::gcd_string_using_len("ABABAB".to_string(), "ABAB".to_string()),
                 "AB"
             )
+        }
+    }
+
+    mod problem_1207_tests {
+        use crate::problem_1207::Solution;
+
+        #[test]
+        fn test_unique_number_of_occurences() {
+            assert_eq!(
+                Solution::unique_number_of_occurrences(vec![-3, 0, 1, -3, 1, 1, 1, -3, 10, 0]),
+                true
+            );
         }
     }
 
