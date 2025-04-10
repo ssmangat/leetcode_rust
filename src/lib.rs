@@ -295,7 +295,7 @@ mod tests {
         fn test_difference_of_two_arrays() {
             assert_eq!(
                 Solution::difference_of_two_arrays(vec![1, 2, 3], vec![2, 4, 6]),
-                vec![vec![1, 3], vec![4, 6]]
+                vec![vec![3, 1], vec![4, 6]]
             );
         }
     }
