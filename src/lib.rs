@@ -6,6 +6,7 @@ pub mod problem_1431;
 pub mod problem_1456;
 pub mod problem_1493;
 pub mod problem_151;
+pub mod problem_1657;
 pub mod problem_1732;
 pub mod problem_1768;
 pub mod problem_2215;
@@ -240,6 +241,18 @@ mod tests {
             assert_eq!(
                 Solution::maximum_vowels_in_substring(String::from("leetcode"), 3),
                 2
+            );
+        }
+    }
+
+    mod problem_1657_tests {
+        use crate::problem_1657::Solution;
+
+        #[test]
+        fn test_close_strings() {
+            assert_eq!(
+                Solution::close_strings(String::from("cabbba"), String::from("abbccc")),
+                true
             );
         }
     }
