@@ -12,6 +12,7 @@ pub mod problem_1768;
 pub mod problem_2215;
 pub mod problem_2352;
 pub mod problem_238;
+pub mod problem_2390;
 pub mod problem_283;
 pub mod problem_345;
 pub mod problem_392;
@@ -327,6 +328,18 @@ mod tests {
                     [2, 7, 7].to_vec()
                 ]),
                 1
+            );
+        }
+    }
+
+    mod problem_2390_tests {
+        use crate::problem_2390::Solution;
+
+        #[test]
+        fn test_removing_stars_from_string() {
+            assert_eq!(
+                Solution::removing_stars_from_string(String::from("x*f*zt*a**t*i*rs*ggw*yb*j*y")),
+                String::from("rggyy")
             );
         }
     }
