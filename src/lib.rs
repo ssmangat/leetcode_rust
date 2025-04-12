@@ -10,6 +10,7 @@ pub mod problem_1657;
 pub mod problem_1732;
 pub mod problem_1768;
 pub mod problem_2215;
+pub mod problem_2352;
 pub mod problem_238;
 pub mod problem_283;
 pub mod problem_345;
@@ -309,6 +310,23 @@ mod tests {
             assert_eq!(
                 Solution::difference_of_two_arrays(vec![1, 2, 3], vec![2, 4, 6]),
                 vec![vec![1, 3], vec![4, 6]]
+            );
+        }
+    }
+
+    mod problem_2352_tests {
+
+        use crate::problem_2352::Solution;
+
+        #[test]
+        fn test_equal_pairs() {
+            assert_eq!(
+                Solution::equal_pairs(vec![
+                    [3, 2, 1].to_vec(),
+                    [1, 7, 6].to_vec(),
+                    [2, 7, 7].to_vec()
+                ]),
+                1
             );
         }
     }
