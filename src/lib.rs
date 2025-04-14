@@ -16,6 +16,7 @@ pub mod problem_2390;
 pub mod problem_283;
 pub mod problem_345;
 pub mod problem_392;
+pub mod problem_394;
 pub mod problem_605;
 pub mod problem_643;
 pub mod problem_724;
@@ -128,6 +129,18 @@ mod tests {
             assert_eq!(
                 Solution::reverse_vowels(String::from("sArtileumoyzet")),
                 String::from("sertoluemiyzAt")
+            );
+        }
+    }
+
+    mod problem_394_tests {
+        use crate::problem_394::Solution;
+
+        #[test]
+        fn test_decode_string() {
+            assert_eq!(
+                Solution::decode_string(String::from("2[abc]3[cd]ef")),
+                String::from("abcabccdcdcdef")
             );
         }
     }
