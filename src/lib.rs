@@ -19,6 +19,7 @@ pub mod problem_392;
 pub mod problem_605;
 pub mod problem_643;
 pub mod problem_724;
+pub mod problem_735;
 pub mod problem_75;
 
 #[cfg(test)]
@@ -173,6 +174,15 @@ mod tests {
         #[test]
         fn test_find_pivot_index() {
             assert_eq!(Solution::find_pivot_index(vec![1, 7, 3, 6, 5, 6]), 3);
+        }
+    }
+
+    mod problem_735_tests {
+        use crate::problem_735::Solution;
+
+        #[test]
+        fn test_asteroid_collision() {
+            assert_eq!(Solution::asteroid_collision(vec![10, 2, -5]), vec![10]);
         }
     }
 
