@@ -16,9 +16,11 @@ pub mod problem_2390;
 pub mod problem_283;
 pub mod problem_345;
 pub mod problem_392;
+pub mod problem_394;
 pub mod problem_605;
 pub mod problem_643;
 pub mod problem_724;
+pub mod problem_735;
 pub mod problem_75;
 pub mod problem_933;
 
@@ -132,6 +134,18 @@ mod tests {
         }
     }
 
+    mod problem_394_tests {
+        use crate::problem_394::Solution;
+
+        #[test]
+        fn test_decode_string() {
+            assert_eq!(
+                Solution::decode_string(String::from("2[abc]3[cd]ef")),
+                String::from("abcabccdcdcdef")
+            );
+        }
+    }
+
     mod problem_605_tests {
         use crate::problem_605::FlowerBed;
         #[test]
@@ -188,6 +202,15 @@ mod tests {
             assert_eq!(r.ping(100), 2);
             assert_eq!(r.ping(3001), 3);
             assert_eq!(r.ping(3002), 3);
+        }
+    }
+
+    mod problem_735_tests {
+        use crate::problem_735::Solution;
+
+        #[test]
+        fn test_asteroid_collision() {
+            assert_eq!(Solution::asteroid_collision(vec![10, 2, -5]), vec![10]);
         }
     }
 
