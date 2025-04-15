@@ -20,6 +20,7 @@ pub mod problem_605;
 pub mod problem_643;
 pub mod problem_724;
 pub mod problem_75;
+pub mod problem_933;
 
 #[cfg(test)]
 mod tests {
@@ -173,6 +174,20 @@ mod tests {
         #[test]
         fn test_find_pivot_index() {
             assert_eq!(Solution::find_pivot_index(vec![1, 7, 3, 6, 5, 6]), 3);
+        }
+    }
+
+    mod problem_933_tests {
+
+        use crate::problem_933::RecentCounter;
+
+        #[test]
+        fn test_ping_counter() {
+            let mut r = RecentCounter::new();
+            assert_eq!(r.ping(1), 1);
+            assert_eq!(r.ping(100), 2);
+            assert_eq!(r.ping(3001), 3);
+            assert_eq!(r.ping(3002), 3);
         }
     }
 
