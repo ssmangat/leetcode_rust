@@ -19,6 +19,7 @@ pub mod problem_392;
 pub mod problem_394;
 pub mod problem_605;
 pub mod problem_643;
+pub mod problem_649;
 pub mod problem_724;
 pub mod problem_735;
 pub mod problem_75;
@@ -179,6 +180,18 @@ mod tests {
                 ),
                 -594.58065
             )
+        }
+    }
+
+    mod problem_649_tests {
+        use crate::problem_649::Solution;
+
+        #[test]
+        fn test_predict_party_victory() {
+            assert_eq!(
+                Solution::predict_party_victory(String::from("RDD")),
+                String::from("Dire")
+            );
         }
     }
 
