@@ -14,6 +14,7 @@ pub mod problem_2352;
 pub mod problem_238;
 pub mod problem_2390;
 pub mod problem_283;
+pub mod problem_328;
 pub mod problem_345;
 pub mod problem_392;
 pub mod problem_394;
@@ -100,6 +101,18 @@ mod tests {
             let mut v = vec![0, 1, 0, 12, 3, 0, 5];
             Solution::move_zeros(&mut v);
             assert_eq!(v, vec![1, 12, 3, 5, 0, 0, 0]);
+        }
+    }
+
+    mod problem_328_test {
+
+        use crate::problem_328::Solution;
+
+        #[test]
+        fn test_odd_even_list() {
+            let input = Solution::vec_to_list(vec![1, 2, 3, 4, 5]);
+            let result = Solution::odd_even_list(input);
+            assert_eq!(Solution::list_to_vec(result), vec![1, 3, 5, 2, 4]);
         }
     }
 
