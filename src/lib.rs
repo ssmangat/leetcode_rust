@@ -9,6 +9,7 @@ pub mod problem_151;
 pub mod problem_1657;
 pub mod problem_1732;
 pub mod problem_1768;
+pub mod problem_206;
 pub mod problem_2215;
 pub mod problem_2352;
 pub mod problem_238;
@@ -78,6 +79,17 @@ mod tests {
                 Solution::reverse_words_of_string(String::from(" Sky is yellow ,   NOT")),
                 "NOT , yellow is Sky"
             );
+        }
+    }
+
+    mod problem_206_test {
+        use crate::problem_206::Solution;
+
+        #[test]
+        fn test_reverse_linked_list() {
+            let input = Solution::vec_to_list(vec![1, 2, 3, 4, 5]);
+            let output = Solution::reverse_linked_list(input);
+            assert_eq!(Solution::list_to_vec(output), vec![5, 4, 3, 2, 1])
         }
     }
 
