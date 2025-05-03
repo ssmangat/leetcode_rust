@@ -15,6 +15,7 @@ pub mod problem_2215;
 pub mod problem_2352;
 pub mod problem_238;
 pub mod problem_2390;
+pub mod problem_242;
 pub mod problem_283;
 pub mod problem_328;
 pub mod problem_345;
@@ -116,6 +117,19 @@ mod tests {
             assert_eq!(
                 Solution::product_of_list(vec![-1, 1, 0, -3, 3]),
                 vec![0, 0, 9, 0, 0]
+            );
+        }
+    }
+
+    mod problem_242_tests {
+
+        use crate::problem_242::Solution;
+
+        #[test]
+        fn test_is_valid_anagram() {
+            assert_eq!(
+                Solution::is_valid_anagram(String::from("anagram"), String::from("nagaram")),
+                true
             );
         }
     }
