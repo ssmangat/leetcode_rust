@@ -22,6 +22,7 @@ pub mod problem_328;
 pub mod problem_345;
 pub mod problem_392;
 pub mod problem_394;
+pub mod problem_49;
 pub mod problem_605;
 pub mod problem_643;
 pub mod problem_649;
@@ -51,6 +52,34 @@ mod tests {
                 Solution::container_with_most_water(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]),
                 49
             )
+        }
+    }
+
+    mod problem_49_tests {
+
+        use crate::problem_49::Solution;
+
+        #[test]
+        fn test_group_anagram() {
+            assert_eq!(
+                Solution::group_anagram(vec![
+                    String::from("eat"),
+                    String::from("tea"),
+                    String::from("tan"),
+                    String::from("ate"),
+                    String::from("nat"),
+                    String::from("bat")
+                ]),
+                vec![
+                    vec![
+                        String::from("eat"),
+                        String::from("tea"),
+                        String::from("ate")
+                    ],
+                    vec![String::from("tan"), String::from("nat")],
+                    vec![String::from("bat")]
+                ]
+            );
         }
     }
 
