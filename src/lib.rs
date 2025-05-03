@@ -1,3 +1,4 @@
+pub mod problem_1;
 pub mod problem_1004;
 pub mod problem_1071;
 pub mod problem_11;
@@ -31,6 +32,15 @@ pub mod problem_933;
 
 #[cfg(test)]
 mod tests {
+
+    mod problem_1_tests {
+        use crate::problem_1::Solution;
+
+        #[test]
+        fn test_two_sum() {
+            assert_eq!(Solution::two_sum(vec![2, 7, 11, 15], 9i32), vec![0, 1])
+        }
+    }
 
     mod problem_11_tests {
         use crate::problem_11::Solution;
