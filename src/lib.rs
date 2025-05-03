@@ -10,6 +10,7 @@ pub mod problem_1657;
 pub mod problem_1732;
 pub mod problem_1768;
 pub mod problem_206;
+pub mod problem_217;
 pub mod problem_2215;
 pub mod problem_2352;
 pub mod problem_238;
@@ -90,6 +91,20 @@ mod tests {
             let input = Solution::vec_to_list(vec![1, 2, 3, 4, 5]);
             let output = Solution::reverse_linked_list(input);
             assert_eq!(Solution::list_to_vec(output), vec![5, 4, 3, 2, 1])
+        }
+    }
+
+    mod problem_217_test {
+        use crate::problem_217::Solution;
+
+        #[test]
+        fn test_contains_duplicate() {
+            assert_eq!(Solution::contains_duplicate(vec![1, 2, 3, 1]), true);
+        }
+
+        #[test]
+        fn test_no_duplicates() {
+            assert_eq!(Solution::contains_duplicate(vec![1, 2, 3, 4, 5, 6]), false);
         }
     }
 
