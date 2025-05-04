@@ -17,6 +17,7 @@ pub mod problem_2352;
 pub mod problem_238;
 pub mod problem_2390;
 pub mod problem_242;
+pub mod problem_247;
 pub mod problem_283;
 pub mod problem_328;
 pub mod problem_345;
@@ -172,6 +173,18 @@ mod tests {
                 Solution::is_valid_anagram(String::from("anagram"), String::from("nagaram")),
                 true
             );
+        }
+    }
+
+    mod problem_247_tests {
+        use crate::problem_247::Solution;
+
+        #[test]
+        fn test_top_k_frequent() {
+            assert_eq!(
+                Solution::top_k_frequent(vec![1, 1, 1, 2, 2, 3], 2),
+                vec![1, 2]
+            )
         }
     }
 
