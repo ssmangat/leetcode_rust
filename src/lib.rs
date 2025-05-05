@@ -21,6 +21,7 @@ pub mod problem_247;
 pub mod problem_283;
 pub mod problem_328;
 pub mod problem_345;
+pub mod problem_36;
 pub mod problem_392;
 pub mod problem_394;
 pub mod problem_49;
@@ -53,6 +54,27 @@ mod tests {
                 Solution::container_with_most_water(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]),
                 49
             )
+        }
+    }
+
+    mod problem_36_tests {
+
+        use crate::problem_36::Solution;
+
+        #[test]
+        fn test_is_valid_sudoku() {
+            let board = vec![
+                vec!['5', '3', '.', '.', '7', '.', '.', '.', '.'],
+                vec!['6', '.', '.', '1', '9', '5', '.', '.', '.'],
+                vec!['.', '9', '8', '.', '.', '.', '.', '6', '.'],
+                vec!['8', '.', '.', '.', '6', '.', '.', '.', '3'],
+                vec!['4', '.', '.', '8', '.', '3', '.', '.', '1'],
+                vec!['7', '.', '.', '.', '2', '.', '.', '.', '6'],
+                vec!['.', '6', '.', '.', '.', '.', '2', '8', '.'],
+                vec!['.', '.', '.', '4', '1', '9', '.', '.', '5'],
+                vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
+            ];
+            assert_eq!(Solution::is_valid_sudoku(board), true);
         }
     }
 
