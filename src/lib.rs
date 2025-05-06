@@ -3,6 +3,7 @@ pub mod problem_1004;
 pub mod problem_1071;
 pub mod problem_11;
 pub mod problem_1207;
+pub mod problem_128;
 pub mod problem_1431;
 pub mod problem_1456;
 pub mod problem_1493;
@@ -132,6 +133,19 @@ mod tests {
                     59
                 ),
                 42
+            );
+        }
+    }
+
+    mod problem_128_test {
+
+        use crate::problem_128::Solution;
+
+        #[test]
+        fn test_find_longest_consecutive_sequence() {
+            assert_eq!(
+                Solution::find_longest_consecutive_sequence(vec![0, 3, 7, 2, 5, 8, 4, 6, 0, 1]),
+                9i32
             );
         }
     }
